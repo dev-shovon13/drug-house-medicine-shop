@@ -1,0 +1,24 @@
+.bg-gradiant{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+.fa-social-icon{
+    transition: all 0.5s;
+}
+.fa-social-icon:hover{
+    cursor: pointer;
+}
+.icon-1:hover{
+color: #009DED;
+}
+.icon-2:hover{
+color: #1773EA;
+}
+.icon-3:hover{
+color: #F14D49;
+}
+.icon-4:hover{
+color: #0270AD;
+}
+.icon-5:hover{
+color: #F70000;
+}
