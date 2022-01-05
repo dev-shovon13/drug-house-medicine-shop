@@ -1,0 +1,10 @@
+.user-img{
+    height:100px;
+}
+.card{
+    transition: all 0.5s;
+}
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
