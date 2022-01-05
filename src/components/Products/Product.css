@@ -1,0 +1,25 @@
+.product-img{
+    height: 180px;
+    width: 100%;
+    transition: all 0.5s;
+}
+.product-img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.stock{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.add-btn{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+@media (max-width: 767px) {
+    .product-img{
+    height: 120px;
+    width: 120px;
+}
+}

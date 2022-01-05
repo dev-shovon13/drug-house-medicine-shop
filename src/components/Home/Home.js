@@ -1,11 +1,11 @@
 import React from 'react';
 import Footer from '../../shared/Footer/Footer';
-import Users from '../Users/Users';
+import Products from '../Products/Products';
 
 const Home = () => {
     return (
         <>
-            <Users />
+            <Products />
             <Footer />
         </>
     );

@@ -1,10 +1,10 @@
 .user-img{
     height:100px;
 }
-.card{
+.user-card{
     transition: all 0.5s;
 }
-.card:hover{
+.user-card:hover{
     cursor: pointer;
     transform: scale(1.02);
 }
