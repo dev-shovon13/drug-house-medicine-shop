@@ -5,3 +5,28 @@
 .nav-link{
     font-family: 'Saira', sans-serif;
 }
+
+/* buttons */
+.login-btn{
+    background-color: transparent;
+    color: #FC9219;
+    border-radius: 20px;
+    border: 1px solid #FC9219;
+    transition: all 0.5s;
+}
+.login-btn:hover{
+    color: white;
+    background-color: #FC9219;
+}
+.signup-btn{
+    background-color: #F7582D;
+    border-radius: 20px;
+    border: 1px solid #F7582D;
+    color: white;
+    transition: all 0.5s;
+}
+.signup-btn:hover{
+    background-color: transparent;
+    border: 1px solid #F7582D;
+    color: #F7582D;
+}
