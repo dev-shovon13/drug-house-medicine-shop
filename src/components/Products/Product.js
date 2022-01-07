@@ -28,7 +28,7 @@ const Product = ({ product }) => {
                 </div>
                 <span className='stock bg-light py-1 px-3 rounded'>
                     {
-                        stock > 1 ? <p className='mb-0'><span className='text-success fw-bold'>{stock}</span> items left</p> : <p className='mb-0 text-danger fw-bold'>Stock Out</p>
+                        stock > 1 ? <p><span className='text-success fw-bold'>{stock}</span> items left</p> : <p className='text-danger fw-bold'>Stock Out</p>
                     }
                 </span>
             </div>
