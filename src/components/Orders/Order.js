@@ -44,10 +44,10 @@ const Order = ({ order }) => {
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                     <div className="d-flex">
-                        <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" className='img-fluid me-2 order-img' />
+                        <img src={product.img} alt="" className='img-fluid me-2 order-img' />
                         <div>
-                            <p className='text-secondary'>{quantity} {quantity > 1 ? "ITEMS" : "ITEM"}</p>
-                            <p className='text-primary'>&#2547;{product.price} Taka</p>
+                            <p className='text-secondary'>{quantity} {quantity > 1 ? "Items" : "Item"}</p>
+                            <p className='text-primary fw-bold'>&#2547;{product.price} Taka</p>
                         </div>
                     </div>
                     <span className="badge rounded-pill" style={{ backgroundColor: background, color: color }}>{payment}</span>
