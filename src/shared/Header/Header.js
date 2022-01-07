@@ -5,8 +5,8 @@ const Header = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top border-bottom border-2 shadow-sm">
             <div className="container">
-                <Link to="/home" className='text-decoration-none text-danger fw-bold' >
-                    <img src="https://i.ibb.co/25fvcGw/logo.png" alt="" />
+                <Link to="/home" >
+                    <img src="https://i.ibb.co/25fvcGw/logo.png" alt="logo" />
                 </Link>
                 <img className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" src="https://i.ibb.co/TM9Jg4f/menu-icon.png" alt="" style={{ height: "45px" }} />
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">

@@ -11,6 +11,7 @@ import Header from './shared/Header/Header'
 import Footer from './shared/Footer/Footer'
 import NotFound from './shared/404/NotFound'
 import Products from "./components/Products/Products";
+import SingleOrder from "./components/Orders/SingleOrder";
 
 function App() {
   return (
@@ -22,9 +23,10 @@ function App() {
         <Route path="/users" element={<Users />} />
         <Route path="/products" element={<Products />} />
         <Route path="/orders" element={<Orders />} />
+        <Route path="/:orderId" element={<SingleOrder />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }

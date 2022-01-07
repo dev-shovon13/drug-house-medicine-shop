@@ -35,7 +35,7 @@ const Product = ({ product }) => {
                         <FontAwesomeIcon icon={faCartPlus} />
                     </button>
                 </div>
-                <span className='stock bg-light py-1 px-3 rounded'>
+                <span className='stock badge rounded-pill py-1 px-3 text-secondary'>
                     {
                         stock > 1 ? <p><span className='text-success fw-bold'>{stock}</span> items left</p> : <p className='text-danger fw-bold'>Stock Out</p>
                     }

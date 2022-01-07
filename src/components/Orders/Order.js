@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import './Order.css'
+import { Link } from 'react-router-dom';
 
 const Order = ({ order }) => {
     const { _id, productId, date, payment, quantity, status } = order
@@ -57,10 +58,12 @@ const Order = ({ order }) => {
                         <span className="dot me-2" style={{ backgroundColor: statusBg }}></span>
                         {status}
                     </div>
-                    <div className="btn btn-sm btn-outline-secondary d-flex align-items-center">
-                        <span className='me-1'>Details</span>
-                        <FontAwesomeIcon icon={faChevronRight} />
-                    </div>
+                    <Link to={`/${_id}`} className='text-decoration-none' >
+                        <div className="btn btn-sm btn-outline-secondary d-flex align-items-center">
+                            <span className='me-1'>Details</span>
+                            <FontAwesomeIcon icon={faChevronRight} />
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
