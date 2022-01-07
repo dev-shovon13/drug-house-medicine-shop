@@ -11,7 +11,7 @@ const Orders = () => {
     return (
         <div className='container my-5'>
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                {users.map(order => <Order orders={order.orders} key={order._id} />)}
+                {users.map(user => <Order orders={user.orders} key={user._id} />)}
             </div>
         </div>
     );

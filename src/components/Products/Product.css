@@ -14,12 +14,14 @@
 }
 .add-btn{
     position: absolute;
-    bottom: 10px;
+    bottom: 6px;
     right: 10px;
 }
+
+/* media queries for responsive */
 @media (max-width: 767px) {
     .product-img{
-    height: 120px;
+    height: 90px;
     width: 120px;
 }
 }
