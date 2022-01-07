@@ -18,8 +18,8 @@ const Order = ({ order }) => {
     let background;
     let color;
     if (payment === "PAID") {
-        color = "#E72925";
-        background = "#FFD9DD"
+        color = "#518a25";
+        background = "#cbffa3"
     } else if (payment === "COD") {
         color = "#EF6E16";
         background = "#FFE9DD"
