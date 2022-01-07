@@ -8,6 +8,7 @@ import Home from "./components/Home/Home";
 import Users from './components/Users/Users';
 import Orders from './components/Orders/Orders';
 import Header from './shared/Header/Header'
+import Footer from './shared/Footer/Footer'
 import NotFound from './shared/404/NotFound'
 import Products from "./components/Products/Products";
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/orders" element={<Orders />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }

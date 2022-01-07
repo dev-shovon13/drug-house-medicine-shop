@@ -4,10 +4,10 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className="pt-5">
+        <div className="pt-2">
             <div className="border-top border-2 bg-gradiant">
                 <div className="d-md-flex justify-content-between align-items-center container">
-                    <p className="p-3   text-dark ">© 2022 DRUG house. All rights reserved.</p>
+                    <p className="p-3   text-dark ">©2022 DRUG HOUSE. All rights reserved.</p>
                     <div className="d-flex justify-content-center pb-3 pb-md-0">
                         <FontAwesomeIcon icon={faTwitter} className="fa-social-icon icon-1 fs-3 me-3" />
                         <FontAwesomeIcon icon={faFacebook} className="fa-social-icon icon-2 fs-3 me-3" />

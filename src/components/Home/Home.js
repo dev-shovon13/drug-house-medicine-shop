@@ -1,12 +1,14 @@
-import React from 'react';
-import Footer from '../../shared/Footer/Footer';
+import { Helmet } from 'react-helmet';
 import Products from '../Products/Products';
 
 const Home = () => {
     return (
         <>
             <Products />
-            <Footer />
+            <Helmet>
+                <title>Drug House</title>
+                <meta name="This is the home page of Drug House" content="Drug House- online medicine shop Website" />
+            </Helmet>
         </>
     );
 };

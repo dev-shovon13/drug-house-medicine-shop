@@ -1,0 +1,7 @@
+/* google font  */
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* styles */
+.nav-link{
+    font-family: 'Saira', sans-serif;
+}
