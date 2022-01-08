@@ -1,3 +1,6 @@
+import { faWhatsapp, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
+import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -40,6 +43,7 @@ const SingleOrder = () => {
                                 <img src={product?.img} alt="" className='img-fluid' />
                             </div>
                             <div className="col-9">
+                                <small className='text-secondary'>Order Id: #{order._id}</small>
                                 <h6>{product?.name}</h6>
                                 <p className='text-secondary'>{order?.quantity} {order?.quantity > 1 ? "Units" : "Unit"}</p>
                                 <div className="d-flex justify-content-between w-50 border-bottom pb-1">
@@ -71,7 +75,7 @@ const SingleOrder = () => {
                             </div>
                             <div>
                                 <h6 className='fw-bold'>Name: <span className='fw-normal'>{user?.name}</span></h6>
-                                <h6 className='fw-bold'>Mobile: <span className='fw-normal'>{user?.phone}</span></h6>
+                                <h6 className='fw-bold'>Mobile: <span className='fw-normal'>{user?.phone}</span> <FontAwesomeIcon className='fs-5 mx-2 text-primary' icon={faPhoneSquareAlt} /><FontAwesomeIcon className='fs-5 text-success' icon={faWhatsappSquare} /></h6>
                                 <h6 className='fw-bold'>Address: <span className='fw-normal'>{user?.address?.house}</span></h6>
                                 <h6 className='fw-bold'>Pin Code: <span className='fw-normal'>{user?.address?.pinCode}</span></h6>
                                 <h6 className='fw-bold'>City: <span className='fw-normal'>{user?.address?.city}</span></h6>
