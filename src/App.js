@@ -12,6 +12,8 @@ import Footer from './shared/Footer/Footer'
 import NotFound from './shared/404/NotFound'
 import Products from "./components/Products/Products";
 import SingleOrder from "./components/Orders/SingleOrder";
+import LogIn from "./components/LogIn/LogIn";
+import SignUp from "./components/SignUp/SignUp";
 
 function App() {
   return (
@@ -20,10 +22,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/users" element={<Users />} />
         <Route path="/products" element={<Products />} />
         <Route path="/orders" element={<Orders />} />
-        <Route path="/:orderId" element={<SingleOrder />} />
+        <Route path="/order/:orderId" element={<SingleOrder />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

@@ -1,8 +1,8 @@
-import { faWhatsapp, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
-import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
+import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
 
 const SingleOrder = () => {
     const { orderId } = useParams()

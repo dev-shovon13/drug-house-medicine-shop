@@ -1,3 +1,5 @@
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css'
 
@@ -31,7 +33,7 @@ const Header = () => {
                             <div className="btn signup-btn me-2">Sign Up</div>
                         </Link>
                         <Link to="/login" >
-                            <div className="btn login-btn">Log In</div>
+                            <div className="btn login-btn"><FontAwesomeIcon className='me-1' icon={faSignInAlt} />Log In</div>
                         </Link>
                     </div>
                 </div>

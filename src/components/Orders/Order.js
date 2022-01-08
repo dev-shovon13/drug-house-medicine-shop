@@ -58,7 +58,7 @@ const Order = ({ order }) => {
                         <span className="dot me-2" style={{ backgroundColor: statusBg }}></span>
                         {status}
                     </div>
-                    <Link to={`/${_id}`} className='text-decoration-none' >
+                    <Link to={`/order/${_id}`} className='text-decoration-none' >
                         <div className="btn btn-sm btn-outline-secondary d-flex align-items-center">
                             <span className='me-1'>Details</span>
                             <FontAwesomeIcon icon={faChevronRight} />
