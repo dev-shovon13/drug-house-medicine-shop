@@ -3,7 +3,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const Banner = () => {
     return (
-        <div className="bg-white">
+        <div className="bg-white pb-5">
             <div className='container py-5'>
                 <div className="row row-cols-1 row-cols-md-2 align-items-center">
                     <div className="col">
