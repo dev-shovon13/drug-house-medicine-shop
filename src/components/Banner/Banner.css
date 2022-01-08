@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400&display=swap');
+
+.banner{
+    height:400px;
+    transition: all 0.5s;
+}
+.banner:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.title{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #3ACAE6;
+}
+.sub-header{
+    font-family: 'Raleway', sans-serif;
+}
+.banner-btn-1{
+    background-color: #39C9E5;
+}
+.banner-btn-2{
+    border:1px solid #39C9E5;
+    color:#39C9E5;
+}
+.banner-btn-2:hover{
+    color:#39C9E5;
+    background-color: #39c8e518;
+}
+.banner-btn-1:hover{
+    background-color: #1DABD7;
+}

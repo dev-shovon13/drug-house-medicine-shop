@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import Products from '../Products/Products';
+import Banner from '../Banner/Banner';
 
 const Home = () => {
     return (
@@ -8,7 +8,7 @@ const Home = () => {
                 <title>Drug House</title>
                 <meta name="This is the home page of Drug House" content="Drug House- online medicine shop Website" />
             </Helmet>
-            <Products />
+            <Banner/>
         </>
     );
 };
