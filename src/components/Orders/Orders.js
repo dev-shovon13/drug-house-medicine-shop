@@ -30,7 +30,7 @@ const Orders = () => {
     const showYesterday = orders.filter(yesterday)
 
     // search
-    const handleSearch = e => {
+    const handleSearch = (e) => {
         const searchText = e.target.value
         const matchedOrder = orders.filter(order => order._id.toLowerCase().includes(searchText.toLowerCase()))
         setDisplayOrders(matchedOrder)

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import Spinner from '../../shared/Spinner';
 import Order from '../Orders/Order';
 
@@ -41,27 +42,31 @@ const Dashboard = () => {
     }
     return (
         <div className='container my-4'>
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 text-center text-white">
+            <Helmet>
+                <title>Dashboard | Drug House</title>
+                <meta name="This is the dashboard page of Drug House" content="Drug House- online medicine shop Website" />
+            </Helmet>
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 text-center text-white">
                 <div className="col">
-                    <div className="bg-primary px-5 py-4 rounded shadow">
+                    <div className="bg-primary py-4 rounded shadow">
                         <h5>Orders</h5>
                         <h2>{orders.length}</h2>
                     </div>
                 </div>
                 <div className="col">
-                    <div className="bg-success px-5 py-4 rounded shadow">
+                    <div className="bg-success py-4 rounded shadow">
                         <h5>Total Sales</h5>
                         <h2>3478</h2>
                     </div>
                 </div>
                 <div className="col">
-                    <div className="bg-danger px-5 py-4 rounded shadow">
+                    <div className="bg-danger py-4 rounded shadow">
                         <h5>Store Views</h5>
                         <h2>960</h2>
                     </div>
                 </div>
                 <div className="col">
-                    <div className="bg-warning px-5 py-4 rounded shadow">
+                    <div className="bg-warning py-4 rounded shadow">
                         <h5>Product Views</h5>
                         <h2>1273</h2>
                     </div>
