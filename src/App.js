@@ -14,6 +14,7 @@ import Products from "./components/Products/Products";
 import SingleOrder from "./components/Orders/SingleOrder";
 import LogIn from "./components/LogIn/LogIn";
 import SignUp from "./components/SignUp/SignUp";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/users" element={<Users />} />

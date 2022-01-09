@@ -3,25 +3,32 @@ import { faFacebook, faGithub, faTwitter } from '@fortawesome/free-brands-svg-ic
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './LogIn.css'
 
 const LogIn = () => {
     const navigate = useNavigate()
     const handleLogin = (e) => {
         e.preventDefault()
-        navigate("/home")
+        toast.success("Logged In Successfully")
+        setTimeout(function () {
+            navigate("/home")
+        }, 2000);
     }
+
     return (
         <div className="log-in-bg py-4 text-center">
             <Helmet>
                 <title>Login | Drug House</title>
                 <meta name="This is the login page of Drug House" content="Drug House- online medicine shop Website" />
             </Helmet>
+            <ToastContainer theme="colored" />
             <div className="container mb-5">
                 <div className="bg-white rounded shadow p-5 pb-2 g-4 w-75 mx-auto log-sign">
                     <NavLink to="/home" className="text-decoration-none text-info">
                         <img src="https://i.ibb.co/25fvcGw/logo.png" alt="" className="log-sign-logo mb-3" />
-                    </NavLink>                    
+                    </NavLink>
                     <div className="row align-items-center">
                         <div className="login-form col-12 col-lg-6 pt-2 pt-lg-0">
                             <form onSubmit={handleLogin}>

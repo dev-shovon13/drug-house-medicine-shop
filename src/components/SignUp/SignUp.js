@@ -3,6 +3,8 @@ import { faFingerprint } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './SignUp.css'
 
 
@@ -10,7 +12,10 @@ const SignUp = () => {
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
-        navigate("/home")
+        toast.success("Created Account Successfully")
+        setTimeout(function () {
+            navigate("/home")
+        }, 2000);
     }
     return (
         <div className="sign-up-bg text-center">
@@ -18,6 +23,7 @@ const SignUp = () => {
                 <title>SignUp | Drug House</title>
                 <meta name="This is the signup page of Drug House" content="Drug House- online medicine shop Website" />
             </Helmet>
+            <ToastContainer theme="colored" />
             <div className="container py-4">
                 <div className="bg-white rounded shadow p-4 g-4 w-75 mx-auto log-sign">
                     <NavLink to="/home" className="text-decoration-none text-info">

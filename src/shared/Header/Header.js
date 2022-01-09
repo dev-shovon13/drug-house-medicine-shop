@@ -17,6 +17,9 @@ const Header = () => {
                             <NavLink style={({ isActive }) => ({ color: isActive ? '#FC9219' : 'gray', fontWeight: isActive ? '700' : '400' })} to="/home" className="nav-link" aria-current="page" >Home</NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink style={({ isActive }) => ({ color: isActive ? '#FC9219' : 'gray', fontWeight: isActive ? '700' : '400' })} to="/dashboard" className="nav-link" aria-current="page" >Dashboard</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink style={({ isActive }) => ({ color: isActive ? '#FC9219' : 'gray', fontWeight: isActive ? '700' : '400' })} to="/products" className="nav-link" aria-current="page" >Products</NavLink>
                         </li>
                         <li className="nav-item">
