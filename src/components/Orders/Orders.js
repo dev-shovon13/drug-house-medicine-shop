@@ -5,6 +5,8 @@ import Order from './Order';
 import Spinner from '../../shared/Spinner';
 import SearchBar from '../../shared/SearchBar';
 
+
+
 const Orders = () => {
     const [orders, setOrders] = useState([])
     const [displayOrders, setDisplayOrders] = useState([])
@@ -17,6 +19,7 @@ const Orders = () => {
             })
     }, [])
 
+    // filtering dates 
     function today(event) {
         return event.date === "05-01-2022";
     }
@@ -26,14 +29,27 @@ const Orders = () => {
     const showToday = orders.filter(today)
     const showYesterday = orders.filter(yesterday)
 
+    // search
     const handleSearch = e => {
         const searchText = e.target.value
         const matchedOrder = orders.filter(order => order._id.toLowerCase().includes(searchText.toLowerCase()))
         setDisplayOrders(matchedOrder)
     }
 
+    // spinner
     if (orders.length === 0) {
         return <Spinner />
+    }
+
+    const filtering = (filter) => {
+        return (
+            filter.length > 0 ?
+                <div className="row row-cols-1 row-cols-lg-2 g-3">
+                    {filter.map(order => <Order order={order} key={order._id} />)}
+                </div>
+                :
+                <NoResult />
+        )
     }
 
     return (
@@ -52,34 +68,13 @@ const Orders = () => {
             </nav>
             <div className="tab-content" id="nav-tabContent">
                 <div className="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-                    {
-                        displayOrders.length > 0 ?
-                            <div className="row row-cols-1 row-cols-lg-2 g-3">
-                                {displayOrders.map(order => <Order order={order} key={order._id} />)}
-                            </div>
-                            :
-                            <NoResult />
-                    }
+                    {filtering(displayOrders)}
                 </div>
                 <div className="tab-pane fade" id="today" role="tabpanel" aria-labelledby="today-tab">
-                    {
-                        showToday.length > 0 ?
-                            <div className="row row-cols-1 row-cols-lg-2 g-3">
-                                {showToday.map(order => <Order order={order} key={order._id} />)}
-                            </div>
-                            :
-                            <NoResult />
-                    }
+                    {filtering(showToday)}
                 </div>
                 <div className="tab-pane fade" id="yesterday" role="tabpanel" aria-labelledby="yesterday-tab">
-                    {
-                        showYesterday.length > 0 ?
-                            <div className="row row-cols-1 row-cols-lg-2 g-3">
-                                {showYesterday.map(order => <Order order={order} key={order._id} />)}
-                            </div>
-                            :
-                            <NoResult />
-                    }
+                    {filtering(showYesterday)}
                 </div>
             </div>
         </div>
