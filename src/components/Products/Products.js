@@ -35,7 +35,7 @@ const Products = () => {
                 <meta name="This is the product page of Drug House" content="Drug House- online medicine shop Website" />
             </Helmet>
             <ToastContainer theme="colored" />
-            <SearchBar handleSearch={handleSearch} />
+            <SearchBar handleSearch={handleSearch} props={"Medicine"} />
             {
                 displayProducts.length > 0 ?
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3">

@@ -58,7 +58,7 @@ const Orders = () => {
                 <title>Orders | Drug House</title>
                 <meta name="This is the order page of Drug House" content="Drug House- online medicine shop Website" />
             </Helmet>
-            <SearchBar handleSearch={handleSearch} />
+            <SearchBar handleSearch={handleSearch} props={"Order by ID"}/>
             <nav className='mb-3'>
                 <div className="nav nav-tabs" id="nav-tab" role="tablist">
                     <button className="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
