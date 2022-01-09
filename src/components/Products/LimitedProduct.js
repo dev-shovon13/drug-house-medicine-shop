@@ -1,5 +1,6 @@
 import{ useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import Spinner from '../../shared/Spinner';
 import Product from './Product';
 
@@ -25,6 +26,7 @@ const LimitedProduct = () => {
     return (
         <div className="py-5">
             <div className="container">
+                <ToastContainer theme="colored" />
                 <div className="header text-center">Our Products</div>
                 <hr className='mt-0 mb-4 shadow'/>
                 <div className="text-center row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
