@@ -8,7 +8,7 @@ const LimitedProduct = () => {
         fetch("https://health-os.herokuapp.com/products")
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, [products])
+    }, [])
     const size = 8
     const items = products?.slice(0, size)
     const scrollToTop = () => {

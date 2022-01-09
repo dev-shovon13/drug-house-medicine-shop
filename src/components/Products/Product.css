@@ -27,10 +27,21 @@
 .see-more-btn:hover{
     background-color: #1DABD7;
 }
+.search-bar{
+    width:300px;
+}
+.search-icon{
+    height: 38px;
+    width: 60px;
+    border-radius: 5px;
+}
 /* media queries for responsive */
 @media (max-width: 767px) {
     .product-img{
     height: 90px;
     width: 120px;
+}
+.search-bar{
+    width:200px
 }
 }
