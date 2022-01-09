@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import NoResult from '../../shared/NoResult';
 import Order from './Order';
+import Spinner from '../../shared/Spinner';
+import SearchBar from '../../shared/SearchBar';
 
 const Orders = () => {
     const [orders, setOrders] = useState([])
@@ -16,6 +17,15 @@ const Orders = () => {
             })
     }, [])
 
+    function today(event) {
+        return event.date === "05-01-2022";
+    }
+    function yesterday(event) {
+        return event.date === "04-01-2022";
+    }
+    const showToday = orders.filter(today)
+    const showYesterday = orders.filter(yesterday)
+
     const handleSearch = e => {
         const searchText = e.target.value
         const matchedOrder = orders.filter(order => order._id.toLowerCase().includes(searchText.toLowerCase()))
@@ -23,7 +33,7 @@ const Orders = () => {
     }
 
     if (orders.length === 0) {
-        return <div className="text-center w-75 mx-auto"><img src="https://i.ibb.co/FwncvXn/spinner.gif" alt="" className="img-fluid" /></div>
+        return <Spinner />
     }
 
     return (
@@ -32,21 +42,46 @@ const Orders = () => {
                 <title>Orders | Drug House</title>
                 <meta name="This is the order page of Drug House" content="Drug House- online medicine shop Website" />
             </Helmet>
-            <div className="d-flex justify-content-end">
-                <input className='form-control mb-4 me-2 search-bar' placeholder='Search Order by Order ID' type="text" onChange={handleSearch} />
-                <button className='btn search-icon bg-primary d-flex justify-content-center align-items-center'><FontAwesomeIcon icon={faSearch} className='text-white fs-4 ' /></button>
+            <SearchBar handleSearch={handleSearch} />
+            <nav className='mb-3'>
+                <div className="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button className="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+                    <button className="nav-link" id="today-tab" data-bs-toggle="tab" data-bs-target="#today" type="button" role="tab" aria-controls="today" aria-selected="false">Today</button>
+                    <button className="nav-link" id="yesterday-tab" data-bs-toggle="tab" data-bs-target="#yesterday" type="button" role="tab" aria-controls="yesterday" aria-selected="false">Yesterday</button>
+                </div>
+            </nav>
+            <div className="tab-content" id="nav-tabContent">
+                <div className="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                    {
+                        displayOrders.length > 0 ?
+                            <div className="row row-cols-1 row-cols-lg-2 g-3">
+                                {displayOrders.map(order => <Order order={order} key={order._id} />)}
+                            </div>
+                            :
+                            <NoResult />
+                    }
+                </div>
+                <div className="tab-pane fade" id="today" role="tabpanel" aria-labelledby="today-tab">
+                    {
+                        showToday.length > 0 ?
+                            <div className="row row-cols-1 row-cols-lg-2 g-3">
+                                {showToday.map(order => <Order order={order} key={order._id} />)}
+                            </div>
+                            :
+                            <NoResult />
+                    }
+                </div>
+                <div className="tab-pane fade" id="yesterday" role="tabpanel" aria-labelledby="yesterday-tab">
+                    {
+                        showYesterday.length > 0 ?
+                            <div className="row row-cols-1 row-cols-lg-2 g-3">
+                                {showYesterday.map(order => <Order order={order} key={order._id} />)}
+                            </div>
+                            :
+                            <NoResult />
+                    }
+                </div>
             </div>
-            {
-                displayOrders.length > 0 ?
-                    <div className="row row-cols-1 row-cols-lg-2 g-3">
-                        {displayOrders.map(order => <Order order={order} key={order._id} />)}
-                    </div>
-                    :
-                    <div className='text-center my-5 pb-5 text-secondary'>
-                        <FontAwesomeIcon icon={faSearch} className='mb-4' style={{ fontSize: "70px" }} />
-                        <h1> Sorry ! No Results Found</h1>
-                    </div>
-            }
         </div>
     );
 };

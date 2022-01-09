@@ -1,5 +1,6 @@
 import{ useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Spinner from '../../shared/Spinner';
 import Product from './Product';
 
 const LimitedProduct = () => {
@@ -17,6 +18,9 @@ const LimitedProduct = () => {
             behavior: 'smooth'
         });
     };
+    if (products.length === 0) {
+        return <Spinner />
+    }
 
     return (
         <div className="py-5">

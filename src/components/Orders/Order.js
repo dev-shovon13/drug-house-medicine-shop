@@ -15,6 +15,16 @@ const Order = ({ order }) => {
             .then(data => setProduct(data))
     }, [productId])
 
+    // defining a date as today
+    let showDate;
+    if (date === "05-01-2022") {
+        showDate = "Today"
+    } else if (date === "04-01-2022") {
+        showDate = "Yesterday"
+    } else {
+        showDate = date
+    }
+
     // custom style for payment 
     let background;
     let color;
@@ -41,7 +51,7 @@ const Order = ({ order }) => {
             <div className="card h-100 shadow-sm p-2">
                 <div className="d-flex justify-content-between text-secondary mb-2">
                     <p>Order #{_id}</p>
-                    <p>{date}</p>
+                    <p>{showDate}</p>
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                     <div className="d-flex">
